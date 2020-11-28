@@ -46,17 +46,8 @@ spec:
               exec:
                 # https://freecontent.manning.com/handling-client-requests-properly-with-kubernetes/
                 command: ["/bin/sh", "-c", "sleep 5"]
-          volumeMounts:
-            - name: secret
-              subPath: userlist
-              mountPath: /etc/pgbouncer/userlist.txt
-              readOnly: true
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-      volumes:
-      - name: secret
-        secret:
-          secretName: pgbouncer-secret
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
