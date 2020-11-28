@@ -11,6 +11,6 @@ keywords:
 home: http://www.pgbouncer.org
 icon: https://belaytzev.github.io/pgbouncer-helm/pgbouncer.png
 source:
-  - https://belaytzev.github.com/pgbouncer-helm
+  - https://belaytzev.github.io/pgbouncer-helm
 maintainers:
   - name: belaytzev
