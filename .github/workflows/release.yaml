@@ -20,4 +20,4 @@ jobs:
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@master
         env:
-          CR_TOKEN: '${{ secrets.ACTIONS_DEPLOY_KEY }}'
+          CR_TOKEN: '${{ secrets.CR_TOKEN }}'
