@@ -1,0 +1,148 @@
+replicaCount: 1
+
+image:
+  repository: pgbouncer/pgbouncer
+  tag: 1.15.0
+  pullPolicy: Always
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+pgbouncer:
+  port: 6432
+
+env:
+  "DATABASES_HOST": "<PostgreSQL IP>"
+  "DATABASES_PORT": "5432"
+  "DATABASES_DBNAME": "<PostgreSQL DB name>"
+  "DATABASES_USER": "<PostgreSQL DB username>"
+  "DATABASES_PASSWORD": "<PostgreSQL DB password>"
+  "PGBOUNCER_LISTEN_PORT": "6432"
+  ##
+  # Database Settings
+  ##
+  # "DATABASES_AUTH_USER": ""
+  # "DATABASES_POOL_SIZE": ""
+  # "DATABASES_RESERVE_POOL": ""
+  # "DATABASES_CONNECT_QUERY": ""
+  # "DATABASES_POOL_MODE": ""
+  # "DATABASES_MAX_DB_CONNECTIONS": ""
+  # "DATABASES_CLIENT_ENCODING": ""
+  # "DATABASES_DATESTYLE": ""
+  # "DATABASES_TIMEZONE": ""
+  ##
+  # PgBouncer Settings
+  ##
+  # "PGBOUNCER_LOGFILE": ""
+  # "PGBOUNCER_PIDFILE": ""
+  # "PGBOUNCER_UNIX_SOCKET_DIR": ""
+  # "PGBOUNCER_UNIX_SOCKET_MODE": ""
+  # "PGBOUNCER_UNIX_SOCKET_GROUP": ""
+  # "PGBOUNCER_USER": ""
+  # "PGBOUNCER_AUTH_HBA_FILE": ""
+  # "PGBOUNCER_AUTH_QUERY": ""
+  # "PGBOUNCER_AUTH_TYPE": ""
+  # "PGBOUNCER_AUTH_FILE": ""
+  # "PGBOUNCER_POOL_MODE": ""
+  # "PGBOUNCER_MAX_CLIENT_CONN": ""
+  # "PGBOUNCER_DEFAULT_POOL_SIZE": ""
+  # "PGBOUNCER_MIN_POOL_SIZE": ""
+  # "PGBOUNCER_RESERVE_POOL_SIZE": ""
+  # "PGBOUNCER_RESERVE_POOL_TIMEOUT": ""
+  # "PGBOUNCER_MAX_DB_CONNECTIONS": ""
+  # "PGBOUNCER_MAX_USER_CONNECTIONS": ""
+  # "PGBOUNCER_DISABLE_PQEXEC": ""
+  # "PGBOUNCER_APPLICATION_NAME_ADD_HOST": ""
+  # "PGBOUNCER_CONFFILE": ""
+  # "PGBOUNCER_JOB_NAME": ""
+  ##
+  # Log settings
+  ##
+  # "PGBOUNCER_SYSLOG": ""
+  # "PGBOUNCER_SYSLOG_IDENT": ""
+  # "PGBOUNCER_SYSLOG_FACILITY": ""
+  # "PGBOUNCER_LOG_CONNECTIONS": ""
+  # "PGBOUNCER_LOG_DISCONNECTIONS": ""
+  # "PGBOUNCER_LOG_POOLER_ERRORS": ""
+  # "PGBOUNCER_STATS_PERIOD": ""
+  # "PGBOUNCER_VERBOSE": ""
+  # "PGBOUNCER_STATS_USERS": ""
+  ##
+  # Connection sanity checks, timeouts
+  ##
+  # "PGBOUNCER_SERVER_RESET_QUERY": ""
+  # "PGBOUNCER_SERVER_RESET_QUERY_ALWAYS": ""
+  # "PGBOUNCER_SERVER_CHECK_DELAY": ""
+  # "PGBOUNCER_SERVER_CHECK_QUERY": ""
+  # "PGBOUNCER_SERVER_LIFETIME": ""
+  # "PGBOUNCER_SERVER_IDLE_TIMEOUT": ""
+  # "PGBOUNCER_SERVER_CONNECT_TIMEOUT": ""
+  # "PGBOUNCER_SERVER_LOGIN_RETRY": ""
+  # "PGBOUNCER_CLIENT_LOGIN_TIMEOUT": ""
+  # "PGBOUNCER_AUTODB_IDLE_TIMEOUT": ""
+  # "PGBOUNCER_DNS_MAX_TTL": ""
+  # "PGBOUNCER_DNS_NXDOMAIN_TTL": ""
+  ##
+  # TLS settings
+  ##
+  # "PGBOUNCER_CLIENT_TLS_SSLMODE": ""
+  # "PGBOUNCER_CLIENT_TLS_KEY_FILE": ""
+  # "PGBOUNCER_CLIENT_TLS_CERT_FILE": ""
+  # "PGBOUNCER_CLIENT_TLS_CA_FILE": ""
+  # "PGBOUNCER_CLIENT_TLS_PROTOCOLS": ""
+  # "PGBOUNCER_CLIENT_TLS_CIPHERS": ""
+  # "PGBOUNCER_CLIENT_TLS_ECDHCURVE": ""
+  # "PGBOUNCER_CLIENT_TLS_DHEPARAMS": ""
+  # "PGBOUNCER_SERVER_TLS_SSLMODE": ""
+  # "PGBOUNCER_SERVER_TLS_CA_FILE": ""
+  # "PGBOUNCER_SERVER_TLS_KEY_FILE": ""
+  # "PGBOUNCER_SERVER_TLS_CERT_FILE": ""
+  # "PGBOUNCER_SERVER_TLS_PROTOCOLS": ""
+  # "PGBOUNCER_SERVER_TLS_CIPHERS": ""
+  ##
+  # Dangerous timeouts
+  ##
+  # "PGBOUNCER_QUERY_TIMEOUT": ""
+  # "PGBOUNCER_QUERY_WAIT_TIMEOUT": ""
+  # "PGBOUNCER_CLIENT_IDLE_TIMEOUT": ""
+  # "PGBOUNCER_IDLE_TRANSACTION_TIMEOUT": ""
+  # "PGBOUNCER_PKT_BUF": ""
+  # "PGBOUNCER_MAX_PACKET_SIZE": ""
+  # "PGBOUNCER_LISTEN_BACKLOG": ""
+  # "PGBOUNCER_SBUF_LOOPCNT": ""
+  # "PGBOUNCER_SUSPEND_TIMEOUT": ""
+  # "PGBOUNCER_TCP_DEFER_ACCEPT": ""
+  # "PGBOUNCER_TCP_KEEPALIVE": ""
+  # "PGBOUNCER_TCP_KEEPCNT": ""
+  # "PGBOUNCER_TCP_KEEPIDLE": ""
+  # "PGBOUNCER_TCP_KEEPINTVL": ""
+
+podSecurityContext: {}
+
+serviceAccount:
+  create: false
+
+securityContext: {}
+
+service:
+  type: ClusterIP
+  port: 6432
+
+ingress:
+  enabled: false
+  annotations: {}
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

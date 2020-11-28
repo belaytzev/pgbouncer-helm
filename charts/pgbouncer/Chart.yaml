@@ -1,0 +1,16 @@
+name: pgbouncer
+apiVersion: v1
+version: 1.0.0
+appVersion: 1.15.0
+description: Lightweight connection pooler for PostgreSQL
+keywords:
+  - pgbouncer
+  - postgres
+  - database
+  - sql
+home: http://www.pgbouncer.org
+icon: https://belaytzev.github.io/pgbouncer-helm/pgbouncer.png
+source:
+  - https://belaytzev.github.com/pgbouncer-helm
+maintainers:
+  - name: belaytzev

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "pgbouncer.fullname" . }}-headless
+  labels:
+{{ include "pgbouncer.labels" . | indent 4 }}
+spec:
+  clusterIP: "None"
+  ports:
+    - name: pgbouncer-headless
+      port: {{ .Values.service.port }}
+      targetPort: {{ .Values.pgbouncer.port }}
+      protocol: TCP
+  selector:
+    app.kubernetes.io/name: {{ include "pgbouncer.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
