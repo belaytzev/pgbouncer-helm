@@ -9,7 +9,7 @@ keywords:
   - database
   - sql
 home: http://www.pgbouncer.org
-icon: https://belaytzev.github.io/pgbouncer-helm/pgbouncer.png
+icon: https://sendeyo.com/up/d/2c1ba6b4cc
 source:
   - https://belaytzev.github.io/pgbouncer-helm
 maintainers:
