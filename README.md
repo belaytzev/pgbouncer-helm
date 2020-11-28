@@ -6,7 +6,7 @@
  - Inspired by [cradlepoint](https://github.com/cradlepoint/kubernetes-helm-chart-pgbouncer) based on image [pgbouncer/pgbouncer](https://hub.docker.com/r/pgbouncer/pgbouncer)
 ## Prerequisites
 
-- Kubernetes cluster 1.10+
+- Kubernetes cluster 1.14.10+
 - Helm 2.8.0+
 
 ## Installation
