@@ -14,7 +14,7 @@
 ### Add Helm repository
 
 ```bash
-helm repo add belaytzev-pgbouncer https://belaytzev.github.com/pgbouncer-helm
+helm repo add belaytzev-pgbouncer https://belaytzev.github.io/pgbouncer-helm
 helm repo update
 ```
 
