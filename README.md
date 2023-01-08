@@ -1,5 +1,7 @@
 # Helm Chart for PgBouncer
 
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/pgbouncer)](https://artifacthub.io/packages/search?repo=pgbouncer)
+
 ## Introduction
 
  - This [Helm](https://helm.sh/) chart installs [pgbouncer](http://www.pgbouncer.org) in a Kubernetes cluster.
