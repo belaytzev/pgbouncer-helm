@@ -24,3 +24,4 @@ To uninstall/delete the `my-release` deployment:
 ```bash
 helm delete --purge my-release
 ```
+
