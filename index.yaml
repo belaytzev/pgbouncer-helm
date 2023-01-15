@@ -3,6 +3,24 @@ entries:
   pgbouncer:
   - apiVersion: v1
     appVersion: 1.15.0
+    created: "2023-01-15T16:01:22.217907236Z"
+    description: Lightweight connection pooler for PostgreSQL
+    digest: e05a6110b8246a2e9deae919031e7837062865c8846b5a85ee59ee443891284d
+    home: http://www.pgbouncer.org
+    icon: https://raw.githubusercontent.com/belaytzev/pgbouncer-helm/main/pgbouncer.png
+    keywords:
+    - pgbouncer
+    - postgres
+    - database
+    - sql
+    maintainers:
+    - name: belaytzev
+    name: pgbouncer
+    urls:
+    - https://github.com/belaytzev/pgbouncer-helm/releases/download/pgbouncer-1.15.1/pgbouncer-1.15.1.tgz
+    version: 1.15.1
+  - apiVersion: v1
+    appVersion: 1.15.0
     created: "2020-11-28T14:32:59.821047123Z"
     description: Lightweight connection pooler for PostgreSQL
     digest: fd10a983d8fd2d848f711a1ec24db26ca824f0fab6e215043566555438e8737b
@@ -37,4 +55,4 @@ entries:
     urls:
     - https://github.com/belaytzev/pgbouncer-helm/releases/download/pgbouncer-1.0.0/pgbouncer-1.0.0.tgz
     version: 1.0.0
-generated: "2020-11-28T14:31:21.87184545Z"
+generated: "2023-01-15T16:01:22.217919136Z"
